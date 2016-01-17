@@ -15,7 +15,7 @@
     // 创建对象时候需要传入当前Activity
     mVerifyFrame = new VerifyFrame(this);
 ```
-添加两个监听
+添加两个监听,并实现接口,做相应的处理工作.
 ```Java
     // 如果不符合注解中的条件回调方法
     mVerifyFrame.setOnErrorListener(this);
