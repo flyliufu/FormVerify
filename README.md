@@ -8,6 +8,10 @@
 ```
 目前有个缺点就是需要在你所有的加注解的View findViewById 后才可以new 这个对象.
 ```Java
+    @Verify(type = Type.PHONE)
+    private ExpandableEditText mEtPhone;
+    // other code
+    mEtPhone = (ExpandableEditText) findViewById(R.id.eet_login_phone_number);
     // 创建对象时候需要传入当前Activity
     mVerifyFrame = new VerifyFrame(this);
 ```
