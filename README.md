@@ -22,4 +22,18 @@
     // 在表单中所有输入框都不为空的时候返回true,其他时候返回false
     mVerifyFrame.setOnAllowSubmitListener(this);
 ```
+```java
+    // 进行表单验证
+    if (mVerifyFrame.verify()) {
+        // 验证通过后执行的方法
+    }
+```
+别忘记在Activity销毁的时候调用对象的销毁方法
+```java
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mVerifyFrame.onDestroy();
+    }
+```
 写的还不完善,请各位多指教.
