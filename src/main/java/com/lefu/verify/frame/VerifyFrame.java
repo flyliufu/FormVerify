@@ -110,7 +110,7 @@ public class VerifyFrame implements TextChangeListenerImpl.OnNeedScanListener {
     /**
      * 正则验证
      *
-     * @param regExp
+     * @param regExp 正则表达式
      * @param value
      * @return
      */
