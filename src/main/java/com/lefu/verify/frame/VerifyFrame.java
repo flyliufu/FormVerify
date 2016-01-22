@@ -134,6 +134,8 @@ public class VerifyFrame implements TextChangeListenerImpl.OnNeedScanListener {
             flag = false;
         } else if (id == Type.PHONE.getId() && !VerifyTools.isPhone(value)) {
             flag = false;
+        } else if (id == Type.PASSWORD.getId() && !VerifyTools.isRealPwd(value)) {
+            flag = false;
         }
         return flag;
     }

@@ -1,5 +1,7 @@
 package com.lefu.verify.util;
 
+import android.text.TextUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -111,5 +113,28 @@ public class VerifyTools {
         pattern = Pattern.compile(regExp);
         matcher = pattern.matcher(value);
         return matcher.find();
+    }
+
+    /**
+     * 是否是正确的密码规则
+     */
+    public static boolean isRealPwd(String pwd) {
+        if (TextUtils.isEmpty(pwd)) {
+            return false;
+        }
+        if (pwd.length() < 11) {
+            return false;
+        }
+        Pattern pattern1 = Pattern.compile("^[0-9]*$");
+        Matcher matcher1 = pattern1.matcher(pwd);
+        if (matcher1.matches()) {
+            return false;
+        }
+        Pattern pattern = Pattern.compile("^[a-zA-z]*$");
+        Matcher matcher = pattern.matcher(pwd);
+        if (matcher.matches()) {
+            return false;
+        }
+        return true;
     }
 }
