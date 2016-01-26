@@ -122,7 +122,7 @@ public class VerifyTools {
         if (TextUtils.isEmpty(pwd)) {
             return false;
         }
-        if (pwd.length() < 11) {
+        if (pwd.length() < 6) {
             return false;
         }
         Pattern pattern1 = Pattern.compile("^[0-9]*$");

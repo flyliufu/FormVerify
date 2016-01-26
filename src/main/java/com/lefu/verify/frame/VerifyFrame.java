@@ -219,7 +219,7 @@ public class VerifyFrame implements TextChangeListenerImpl.OnNeedScanListener {
         public void onAllowSubmit(boolean flag);
     }
 
-    public void onDestroy() {
+    public void destroy() {
         clazz = null;
         object = null;
 
